@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+swmtools/__init__.py
+swmtools/manytools.py
+swmtools.egg-info/PKG-INFO
+swmtools.egg-info/SOURCES.txt
+swmtools.egg-info/dependency_links.txt
+swmtools.egg-info/top_level.txt
