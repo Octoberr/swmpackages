@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: swmtools
-Version: 1.1
+Version: 1.2.0
 Summary: util tools for daily dev
 Home-page: https://github.com/Octoberr/swmpackages
 Author: october
@@ -25,8 +25,13 @@ Description: # 前言
         ### 使用方法
         线下安装：python setup.py bdist_wheel
         
-        线上安装：pip install -i https://test.pypi.org/simple/ swmtools
+        线上安装：
         
+            测试版:
+                    pip install -i https://test.pypi.org/simple/ swmtools
+                 
+            正式版：
+                    pip install swmtools
 Keywords: daily work setup tools
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
