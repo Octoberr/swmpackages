@@ -90,3 +90,19 @@ def remove_duplicate_elements(lst: list) -> list:
     from collections import OrderedDict
     # items = ["foo", "bar", "bar", "foo"]
     return list(OrderedDict.fromkeys(lst).keys())
+
+
+def unicodestr_to_string(ustring: str) -> str:
+    """
+    unicode 的字符串，解码成中文
+    :param ustring:'\u5546\u8baf\u4fe1\u606f'
+    :return:
+    """
+    # data = ustring.encode('latin-1').decode('unicode_escape')
+    return repr(ustring)
+
+
+if __name__ == '__main__':
+    d = '\u5546\u8baf\u4fe1\u606f'
+    # c = unicodestr_to_string(d)
+    print(repr(d))
