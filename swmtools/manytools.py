@@ -84,6 +84,9 @@ def max_index(lst: list) -> int:
 def remove_duplicate_elements(lst: list) -> list:
     """
     移除一个列表中重复的元素
+    对列表中出现的元素进行去重
+    数据类似于：
+    items = ["foo", "bar", "bar", "foo"]
     :param lst: 
     :return: 
     """
@@ -100,6 +103,20 @@ def unicodestr_to_string(ustring: str) -> str:
     """
     # data = ustring.encode('latin-1').decode('unicode_escape')
     return repr(ustring)
+
+
+def sorteddict(d: dict):
+    """
+    对dict中的数据进行排序
+    条件：value为int数字
+    类似于：
+    d = {'apple': 10, 'orange': 20, 'banana': 5, 'tomatto': 1}
+    :param d:
+    :return:
+    """
+    res = sorted(d.items(), key=lambda x: x[1])
+    return res
+
 
 
 if __name__ == '__main__':
