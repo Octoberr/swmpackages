@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: swmtools
-Version: 1.2.0
+Version: 2.0.1
 Summary: util tools for daily dev
 Home-page: https://github.com/Octoberr/swmpackages
 Author: october
@@ -20,6 +20,12 @@ Description: # 前言
         修改名字为swmtools
         
         help(swmtools.manytools)查看目前已有方法
+        
+        ### 2019/03/26
+        新增了xml，xlsx，csv文件的读取方法，help(readmanyfile)查看具体使用
+        新增了时间的处理方法免得以后记混，还有一个计算当前方法运行时间的装饰器
+        help(timeformat)查看具体使用
+        
         
         
         ### 使用方法
