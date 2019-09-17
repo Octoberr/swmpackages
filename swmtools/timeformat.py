@@ -1,11 +1,16 @@
 """
 常用时间的格式化
 create by swm 2019/03/25
+常用的格式化函数
+strptime  str_datetime->datetime
+strftime datetime->str_datetime
 """
 
 from functools import wraps
 import time
 import datetime
+
+import pytz
 
 
 def func_timer(function):
@@ -87,3 +92,21 @@ def get_now(is_unix=True, msec=True):
         datetime_f = datetime.datetime.now()
         datetime_res = datetime_f.strftime("%Y-%m-%d %H:%M:%S")
         return datetime_res
+
+
+def get_beijing_now_unix_time():
+    """
+    获取当前北京时间的unix time
+    :return:
+    """
+    res = datetime.datetime.now(pytz.timezone('Asia/Shanghai')).timestamp()
+    return res
+
+
+def get_beijing_now_str():
+    """
+    获取当前北京时间的str
+    :return:
+    """
+    res = datetime.datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S')
+    return res
