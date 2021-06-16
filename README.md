@@ -19,6 +19,30 @@ help(swmtools.manytools)查看目前已有方法
 
 新增了时间的处理方法，增加了一个计算当前方法运行时间的装饰器，使用help(timeformat)查看具体使用
 
+### 2021/06/16
+新增了单例日志方法，在logging的基础上完成
+
+使用方法
+```python
+from swmtools import MyLogger
+import threading
+import time
+from datetime import datetime
+
+
+def ddd():
+    logger = MyLogger()
+    # print(logger.get_instance())
+    # logger.logger.info()
+    logger.info(f"Now time is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+
+for i in range(0, 10):
+    t = threading.Thread(target=ddd, args=())
+    time.sleep(5)
+    t.start()
+```
+
 
 
 ### 使用方法
@@ -27,7 +51,7 @@ help(swmtools.manytools)查看目前已有方法
 线上安装：
 
     测试版:
-            pip install -i https://test.pypi.org/simple/ swmtools
+            pip install -i https://test.pypi.org/simple/swmtools
          
     正式版：
             pip install swmtools

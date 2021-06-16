@@ -3,6 +3,7 @@ setuptools描述
 create by swm 2018/11/20
 """
 from pathlib import Path
+
 import setuptools
 
 here = Path(__file__).parent
@@ -13,7 +14,7 @@ with readme.open('r', encoding='utf-8') as fp:
 
 setuptools.setup(
     name="swmtools",  # 包的名字
-    version="2.0.1",      # 版本控制
+    version="2.0.1",  # 版本控制
     description="util tools for daily dev",
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -26,11 +27,14 @@ setuptools.setup(
         'Topic :: Software Development :: Build Tools',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     keywords='daily work setup tools',
     packages=setuptools.find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
-        'xlrd>=1.2.0'
+        'xlrd>=1.2.0',
+        'pytz>=2021.1',
     ],
     project_urls={
         'Source': 'https://github.com/Octoberr/swmpackages'

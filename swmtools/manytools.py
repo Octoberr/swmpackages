@@ -41,7 +41,7 @@ def get_all_indices(element, alist):
 
 def find_highest_values(l: list, num=3) -> list:
     """
-    查找一个列表中评率最高的值，默认为前三个
+    查找一个列表中频率最高的值，默认为前三个
     :param l:
     :param num:
     :return:

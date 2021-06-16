@@ -3,6 +3,9 @@
 create by swm 2019/10/11
 """
 
+from functools import wraps
+
+
 def a_new_decorator(a_func):
     def wrapTheFunction():
         print("I am doing some boring work before executing a_func()")
@@ -28,9 +31,6 @@ a_function_requiring_decoration()
 # outputs:I am doing some boring work before executing a_func()
 #        I am the function which needs some decoration to remove my foul smell
 #        I am doing some boring work after executing a_func()
-
-
-from functools import wraps
 
 
 def logit(logfile='out.log'):
