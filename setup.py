@@ -14,7 +14,7 @@ with readme.open('r', encoding='utf-8') as fp:
 
 setuptools.setup(
     name="swmtools",  # 包的名字
-    version="2.0.1",  # 版本控制
+    version="3.0.1",  # 版本控制
     description="util tools for daily dev",
     long_description=long_description,
     long_description_content_type='text/markdown',

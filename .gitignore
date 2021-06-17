@@ -3,4 +3,6 @@
 .idea
 .git
 __pycache__
-
+build
+dist
+swmtools.egg-info
