@@ -16,7 +16,7 @@ class MyLogger(object):
         level
         format :%(asctime)s %(levelname)s [%(filename)s:%(lineno)d(%(funcName)s)] %(message)s
         console
-        file
+        file  : file complete path
         when
         backCount
         """
