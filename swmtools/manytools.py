@@ -118,6 +118,18 @@ def sorteddict(d: dict):
     return res
 
 
+def resize_image(inpath: str, outpath: str):
+    """
+    重新切割图片大小
+    """
+    from PIL import Image
+    im = Image.open(inpath)
+    (x, y) = im.size # 读取图片大小
+    new_x = 750
+    new_y = 1038
+    out = im.resize((new_x, new_y), Image.ANTIALIAS)
+    out.save(outpath)
+
 
 if __name__ == '__main__':
     d = '\u5546\u8baf\u4fe1\u606f'

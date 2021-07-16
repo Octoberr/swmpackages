@@ -35,6 +35,7 @@ setuptools.setup(
     install_requires=[
         'xlrd>=1.2.0',
         'pytz>=2021.1',
+        'Pillow>=8.3.1',
     ],
     project_urls={
         'Source': 'https://github.com/Octoberr/swmpackages'
