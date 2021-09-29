@@ -110,3 +110,36 @@ def get_beijing_now_str():
     """
     res = datetime.datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S')
     return res
+
+
+def format_time(time_str: str, fmt='%Y-%m-%d'):
+    """
+    日期格式
+    :param time_str: 传入的值
+    :param fmt: 需转成目标日期格式
+    :return:
+    """
+    res = time_str
+    sj_template_tmp = [
+        '%Y{v}%m{v}%d %H:%M:%S',
+        '%Y{v}%m{v}%d%H%M%S',
+        '%Y{v}%m{v}%d',
+        '%Y{v}%m',
+        '%Y{v}%m{v}%d %H',
+        '%Y{v}%m{v}%d %H:%M',
+        '%Y年%m月%d日'
+    ]
+    sj_template_orign = [t.format(v=v) for t in sj_template_tmp for v in ['-', '', '/', '.']]
+    sj_template = list(set(sj_template_orign))
+    sj_template.sort(key=sj_template_orign.index)
+    sj_template.extend([])
+
+    error_num = 0
+    for pattern in sj_template:
+        try:
+            res_tmp = datetime.datetime.strptime(time_str, pattern)
+            res = datetime.datetime.strftime(res_tmp, fmt)
+            break
+        except Exception as e:
+            error_num += 1
+    return res
